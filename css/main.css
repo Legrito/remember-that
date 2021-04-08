@@ -32,14 +32,29 @@ body {
   color: var(--primary-color);
 }
 
-.navbar nav {
-  display: block;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform 0.3s 0.2s ease;
-  transition: -webkit-transform 0.3s 0.2s ease;
-  transition: transform 0.3s 0.2s ease;
-  transition: transform 0.3s 0.2s ease, -webkit-transform 0.3s 0.2s ease;
+@media only screen and (max-width: 795px) {
+  .navbar nav {
+    display: none;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    position: fixed;
+    z-index: 999;
+    width: 66%;
+    right: 0;
+    top: 0;
+    background: var(--mobile-menu-color);
+    height: 100vh;
+    padding: 1em;
+    -webkit-transition: -webkit-transform 0.3s 0.2s ease;
+    transition: -webkit-transform 0.3s 0.2s ease;
+    transition: transform 0.3s 0.2s ease;
+    transition: transform 0.3s 0.2s ease, -webkit-transform 0.3s 0.2s ease;
+  }
+  .navbar nav.menu-btn {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    display: block;
+  }
 }
 
 .navbar .container {
@@ -292,29 +307,11 @@ iframe {
   height: 300px;
 }
 
-nav.menu-btn {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-nav {
-  position: fixed;
-  z-index: 999;
-  width: 66%;
-  right: 0;
-  top: 0;
-  background: var(--mobile-menu-color);
-  height: 100vh;
-  padding: 1em;
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
-}
-
-nav ul.primary-nav {
+ul.primary-nav {
   margin-top: 5em;
 }
 
-nav li a {
+li a {
   color: white;
   text-decoration: none;
   display: block;
@@ -331,18 +328,12 @@ nav li a {
           transition-timing-function: ease-in-out;
 }
 
-nav li a:hover {
+li a:hover {
   color: var(--secondary-color);
 }
 
-.mobile-menu-exit {
-  float: right;
-  margin: 0.5em;
-  cursor: pointer;
-}
-
 @media only screen and (min-width: 796px) {
-  .mobile-menu, .mobile-menu-exit {
+  .mobile-menu {
     display: none;
     position: static;
     opacity: 0;
@@ -372,10 +363,6 @@ nav li a:hover {
     height: auto;
     width: 100%;
     padding: 0;
-    -webkit-transform: unset;
-            transform: unset;
-    -webkit-transition: unset;
-    transition: unset;
   }
   .navbar nav ul {
     display: -webkit-box;
