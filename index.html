@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#">Remember<span>That</span></a>
+            <button id="mobile-cta" class="mobile-menu"><span></span></button>
+            <!-- <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation"> -->
+            
+            <nav>
+                <!-- <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation"> -->
+                <ul class="primary-nav">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+                <ul class="secondary-nav">
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead">It's Nitty &amp; Gritty!</p>
+                <h1>A Task App That Doesn't Stink</h1>
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta">Try for free</a>
+                    <a href="#" class="watch-video-cta">
+                        <img src="images/watch.svg" alt="Watch a video">
+                        Watch a video</a>                    
+                </div>
+            </div>
+            <img src="images/illustration.svg" alt="Illustration" class="hero-img" loading="lazy">
+        </div>
+        
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="container">
+            <ul class="features-list">
+                <li>Unlimited Tasks</li>
+                <li>SMS Task Reminder</li>
+                <li>Confetti Explosions upon Task Completions</li>
+                <li>Social Media Announcement</li>
+                <li>Real Time Collaboration</li>
+                <li>Other awesome features</li>
+            </ul>
+
+            <img src="images/holding-phone.jpg" alt="Man holding phone" loading="lazy">
+        </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/person.jpg" alt="Person" loading="lazy">
+                    <blockquote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ratione nihil aut architecto illum soluta reiciendis, blanditiis, aliquid quibusdam perferendis ducimus at, sapiente consequatur neque expedita consectetur deserunt nemo quis? </blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+                <li>
+                    <img src="images/person.jpg" alt="Person" loading="lazy">
+                    <blockquote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ratione nihil aut architecto illum soluta reiciendis, blanditiis, aliquid quibusdam perferendis ducimus at, sapiente consequatur neque expedita consectetur deserunt nemo quis? </blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+                <li>
+                    <img src="images/person.jpg" alt="Person" loading="lazy">
+                    <blockquote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ratione nihil aut architecto illum soluta reiciendis, blanditiis, aliquid quibusdam perferendis ducimus at, sapiente consequatur neque expedita consectetur deserunt nemo quis? </blockquote>
+                    <cite>- Jane Doe</cite>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name here">
+                    <!-- <label for="email">Email</label>
+                    <input type="email" id="email" name="email"> -->
+                    <label for="message">Message</label>
+                    <textarea name="message" id="massage" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+                    <input type="submit" class="send-message-cta" value="Send message">
+                </form>
+            </div>
+            <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31437.423070455392!2d-118.41917089311157!3d34.08355834211381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2z0JHQtdCy0LXRgNC70Lgt0KXQuNC70LvQtywg0JrQsNC70LjRhNC-0YDQvdC40Y8sINCh0KjQkA!5e0!3m2!1sru!2sua!4v1617632935919!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- <p class="source">https://codepen.io/designcourse/pen/JjbPdqd</p>
+    <p class="source">https://www.youtube.com/watch?v=D-h8L5hgW-w</p> -->
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav');
+              mobileBtn.addEventListener('click', () => {
+            nav.classList.toggle('menu-btn');
+            mobileBtn.classList.toggle('is-active');
+        })
+
+    </script>
+</body>
+</html>

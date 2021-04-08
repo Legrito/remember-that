@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    transition: all ease-in-out 1s;
+}
+
+.c-humburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    box-shadow: 0;
+    border: none;
+    cursor: pointer;
+    background: #ff0077;
+    transition: background 0.25s;
+}
+
+.c-humburger:focus {
+    outline: none;
+}
+
+.c-humburger span {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 9px;
+    right: 9px;
+    height: 4px;
+    background: #fff;
+    transition: background 0.25s 0.15s;
+}
+
+.c-humburger span::before, .c-humburger span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transition-property: bottom, top, transform;
+    transition-duration: 0.5s;
+    transition-delay: 0.3s, 0.3s, 0;
+
+}
+
+.c-humburger span::before {
+    top: -10px;
+}
+
+.c-humburger span::after {
+    bottom: -10px;
+}
+
+.c-humburger.is-active {
+    background: #a5004d;
+}
+
+.c-humburger.is-active span {
+    background: none;
+
+}
+
+.c-humburger.is-active span::before {
+    top: 0;
+    transform: rotate(-405deg);
+}
+
+.c-humburger.is-active span::after {
+    bottom: 0;
+    transform: rotate(405deg);
+}
+
+#menu {
+    width: 300px;
+    margin-left: -255px;
+    padding-top: 100px;
+    padding-left: 100px;
+    background: #ffd3e8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 1s;
+    z-index: 999;
+}
+
+#menu.nav-active {
+    margin-left: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.body-active {
+    margin-left: 300px;
+}
+
+.menu-items-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items-list li {
+    font-size: 1.3em;    
+    color: #a5004d;
+
+}
+
+.menu-items-list li:not(:last-child) {
+    margin-bottom: 20px;
+}
