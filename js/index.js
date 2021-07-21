@@ -3,9 +3,8 @@ const mobileBtn = document.getElementById('mobile-cta')
               burgerBTN = document.querySelector('.c-humburger');
 
 
-              burgerBTN.addEventListener('click', function(e) {
+burgerBTN.addEventListener('click', function(e) {
     e.preventDefault();
-    this.classList.toggle('is-active');
-    nav.classList.toggle('menu-btn');
-    console.log('is-active');
+    burgerBTN.classList.toggle('is-active');
+    // nav.classList.toggle('menu-btn');
 })

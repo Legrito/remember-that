@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
-  --primary-color: #007AF3;
+  --primary-color: #007af3;
   --secondary-color: #ffb065;
-  --mobile-menu-color: #20272E;
+  --mobile-menu-color: #20272e;
 }
 
 html {
@@ -10,10 +10,14 @@ html {
 }
 
 body {
-  background: #F2F2F2;
+  background: #f2f2f2;
   margin: 0;
-  font-family: 'Poppins';
-  letter-spacing: .02em;
+  font-family: "Poppins";
+  letter-spacing: 0.02em;
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 .navbar {
@@ -67,7 +71,7 @@ body {
 .navbar .mobile-menu {
   cursor: pointer;
   display: block;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   overflow: hidden;
@@ -98,8 +102,9 @@ body {
   background: var(--primary-color);
 }
 
-.navbar .mobile-menu span::before, .navbar .mobile-menu span::after {
-  content: '';
+.navbar .mobile-menu span::before,
+.navbar .mobile-menu span::after {
+  content: "";
   position: absolute;
   display: block;
   left: 0;
@@ -142,10 +147,6 @@ body {
   background: var(--secondary-color);
 }
 
-a {
-  color: #444444;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -164,13 +165,13 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   color: grey;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
 }
 
 .hero .left-col h1 {
   font-size: 2.5em;
   line-height: 1.3em;
-  margin-top: .2em;
+  margin-top: 0.2em;
 }
 
 .hero .left-col .primary-cta {
@@ -196,7 +197,7 @@ section {
 }
 
 .hero .left-col .watch-video-cta img {
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .hero-img {
@@ -226,14 +227,14 @@ ul.features-list li {
 }
 
 ul.features-list li:before {
-  content: '';
+  content: "";
   left: -2em;
   position: absolute;
   width: 20px;
   height: 20px;
   background-image: url(../images/bullet.svg);
   background-size: contain;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .features-section img {
@@ -246,7 +247,7 @@ ul.features-list li:before {
 }
 
 .testimonials-section li {
-  background-color: #006BD6;
+  background-color: #006bd6;
   text-align: center;
   padding: 2em 1em;
   width: 80%;
@@ -257,7 +258,7 @@ ul.features-list li:before {
 .testimonials-section li img {
   width: 5em;
   height: 5em;
-  border: 5px solid #006BD6;
+  border: 5px solid #006bd6;
   border-radius: 50%;
   margin-top: -4.5em;
 }
@@ -272,11 +273,12 @@ label {
   margin-bottom: 0.5em;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.8em;
   margin-bottom: 1em;
-  border-radius: .3em;
+  border-radius: 0.3em;
   border: 1px solid gray;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -291,7 +293,7 @@ input[type="submit"] {
   margin-bottom: 5em;
   border-radius: 5em;
   display: inline-block;
-  padding: .8em 2em;
+  padding: 0.8em 2em;
   width: unset;
   cursor: pointer;
   -webkit-transition: all 250ms ease-in-out;
@@ -311,15 +313,19 @@ ul.primary-nav {
   margin-top: 5em;
 }
 
+li {
+  padding-left: 30px;
+}
+
 li a {
+  padding-right: auto;
+  display: inline-block;
   color: white;
+  text-align: left;
   text-decoration: none;
-  display: block;
   padding: 0.5em;
   font-size: 1.3em;
   text-align: right;
-  -webkit-transform: scale(0%);
-          transform: scale(0%);
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 250ms;
@@ -385,7 +391,7 @@ li a:hover {
     border: 3px solid var(--primary-color);
     font-weight: bold;
     border-radius: 5em;
-    margin-top: -.2em;
+    margin-top: -0.2em;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
@@ -409,6 +415,11 @@ li a:hover {
     z-index: 1000;
     left: 0;
     right: 0;
+  }
+  .navbar nav a {
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
   }
   .hero .container {
     display: -webkit-box;
@@ -489,7 +500,7 @@ li a:hover {
 
 @media only screen and (min-width: 1450px) {
   .features-section:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 10%;
     height: 20em;
@@ -498,7 +509,7 @@ li a:hover {
     top: -4em;
   }
   .features-section:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 200px;
     height: 20em;
@@ -506,5 +517,11 @@ li a:hover {
     left: 4.5em;
     top: 2em;
   }
+}
+
+.primary-nav {
+  display: block;
+  -webkit-transform: none;
+          transform: none;
 }
 /*# sourceMappingURL=main.css.map */
